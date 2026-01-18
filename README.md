@@ -16,8 +16,7 @@ JellyFire is an interactive tool designed to help individuals identify early sig
 
 ## Tech Stack
 
-- **Frontend**: React with TypeScript
-- **Build Tool**: Vite
+- **Framework** React with TypeScript
 - **API Integration**: Gemini API for AI-powered analysis
 
 ## Getting Started
@@ -32,8 +31,8 @@ JellyFire is an interactive tool designed to help individuals identify early sig
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/MinhDung1604/jlfish_5.git
-cd jlfish_5
+git clone https://github.com/MinhDung1604/JellLight.git
+cd JellLight
 ```
 
 2. Install dependencies:
@@ -82,7 +81,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Acknowledgments
 
 - Powered by Google's Gemini API
-- Built with React and Vite
+- Built with React
 - Designed to promote mental health awareness
 
 ## Contact
