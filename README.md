@@ -1,4 +1,4 @@
-# JellyFire
+# JellLight
 
 A React-based web application that helps users assess and predict their burnout risk through an intelligent questionnaire and analysis system.
 
