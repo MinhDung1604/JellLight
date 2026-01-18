@@ -1,4 +1,4 @@
-# JellLight
+<h1 align="center">JellLight <img src="image/logo.jpeg" alt="JellLight Logo" width="70" style="vertical-align: middle; border-radius: 50%"></h1>
 
 A React-based web application that helps users assess and predict their burnout risk through an intelligent questionnaire and analysis system.
 
@@ -44,7 +44,7 @@ npm install
    - Copy `.env.local` to your root directory
    - Add your Gemini API key:
 ```
-GEMINI_API_KEY=your_api_key_here
+GEMINI_API_KEY=put_your_api_key
 ```
 
 4. Start the development server:
