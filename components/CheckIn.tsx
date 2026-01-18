@@ -247,7 +247,7 @@ export const CheckIn: React.FC<CheckInProps> = ({ onSave, onCancel, userName, lo
       return (
         <div className="h-full flex flex-col p-6 animate-fade-in relative overflow-hidden">
              <div className="flex justify-between items-center mb-6 z-10">
-                 {!startInMapMode && <div className="bg-teal-500/20 px-4 py-1.5 rounded-full border border-teal-500/30 flex items-center gap-2"><span className="text-teal-300 text-xs font-bold">+10 XP</span></div>}
+                 {!startInMapMode && <div className="bg-teal-500/20 px-4 py-1.5 rounded-full border border-teal-500/30 flex items-center gap-2"><span className="text-teal-300 text-xs font-bold">+10 Lumis</span></div>}
                  <div className="text-xs text-blue-300 ml-auto">Journey Map</div>
              </div>
              <div className="flex justify-center bg-white/5 rounded-full p-1 mb-6 border border-white/10 z-10">
