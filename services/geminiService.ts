@@ -13,7 +13,7 @@ Goal: To help the user prevent burnout by noticing patterns they might miss and 
 Never sound like a corporate bot or a doctor. You are a friend drifting alongside them.
 `;
 
-// New: Persona for Bloom Guides
+// Persona for Bloom Guides
 const BLOOM_GUIDE_PERSONA = (guideName: string, specialties: string[]) => `
 You are a supportive, empathetic, and professional wellness guide named ${guideName} within "The Bloom Network."
 Your primary role is to listen, validate, and offer guidance related to your specialties: ${specialties.join(', ')}.
@@ -47,7 +47,6 @@ export const analyzeBurnoutRisks = async (logs: DailyLog[]): Promise<AIAnalysis>
 
   try {
     const response = await ai.models.generateContent({
-      // Complex analysis task: use gemini-3-pro-preview
       model: "gemini-2.5-flash", 
       contents: prompt,
       config: {
@@ -97,7 +96,6 @@ export const getJellyfishGreeting = async (user: UserProfile, logs: DailyLog[]):
 
   try {
     const response = await ai.models.generateContent({
-      // Basic text generation: use gemini-3-flash-preview
       model: "gemini-2.5-flash",
       contents: prompt,
     });
@@ -108,7 +106,6 @@ export const getJellyfishGreeting = async (user: UserProfile, logs: DailyLog[]):
 };
 
 export const getCheckInReaction = async (user: UserProfile, currentLog: DailyLog): Promise<string> => {
-  // Pass the calculated analysis directly to Gemini
   const { riskLevel, flags } = currentLog;
 
   let toneInstruction = "Positive reinforcement, keep it light.";
@@ -135,7 +132,6 @@ export const getCheckInReaction = async (user: UserProfile, currentLog: DailyLog
 
   try {
     const response = await ai.models.generateContent({
-      // Basic text generation: use gemini-3-flash-preview
       model: "gemini-2.5-flash",
       contents: prompt,
     });
@@ -176,7 +172,6 @@ export const getWeeklyReflection = async (user: UserProfile, logs: DailyLog[]): 
 
   try {
     const response = await ai.models.generateContent({
-      // More complex synthesis task: use gemini-3-pro-preview
       model: "gemini-2.5-flash",
       contents: prompt,
       config: {
@@ -238,7 +233,6 @@ export const getDrJellyChat = (history: ChatMessage[], logs: DailyLog[]): Chat =
   }));
 
   return ai.chats.create({
-    // Conversational task: use gemini-3-flash-preview
     model: "gemini-2.5-flash",
     config: { systemInstruction },
     history: chatHistory
@@ -261,7 +255,6 @@ export const getBloomGuideChat = (guide: BloomGuide, history: ChatMessage[], log
   }));
 
   return ai.chats.create({
-    // Conversational task: use gemini-3-flash-preview
     model: "gemini-2.5-flash",
     config: { systemInstruction },
     history: chatHistory
